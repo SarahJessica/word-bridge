@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Word_Bridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfe-Ed-t7c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Bridge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqz-xy-vtH">
+                                        <rect key="frame" x="64" y="100" width="286" height="69"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ly-yn-gKS" customClass="ButtonMainMenu" customModule="Word_Bridge" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="303" width="364" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="WPK-WJ-CcX"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="aIG-6K-QVW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="y5d-fz-UEa" kind="presentation" id="F1S-cv-N1d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1019607843" green="0.30980392159999998" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iqz-xy-vtH" firstAttribute="top" secondItem="Kfe-Ed-t7c" secondAttribute="top" constant="100" id="FF8-CX-VS2"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ly-yn-gKS" secondAttribute="trailing" constant="25" id="Her-ZS-Gy1"/>
+                                    <constraint firstItem="8Ly-yn-gKS" firstAttribute="leading" secondItem="Kfe-Ed-t7c" secondAttribute="leading" constant="25" id="LlZ-lj-Wlh"/>
+                                    <constraint firstItem="iqz-xy-vtH" firstAttribute="centerX" secondItem="Kfe-Ed-t7c" secondAttribute="centerX" id="uSY-5a-KL7"/>
+                                    <constraint firstItem="8Ly-yn-gKS" firstAttribute="top" secondItem="Kfe-Ed-t7c" secondAttribute="top" constant="303" id="y7D-ME-WCJ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kfe-Ed-t7c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ra8-Df-dNb"/>
+                            <constraint firstItem="Kfe-Ed-t7c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yah-VI-Bey"/>
+                            <constraint firstItem="Kfe-Ed-t7c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fIC-lz-H5U"/>
+                            <constraint firstItem="Kfe-Ed-t7c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nyx-RO-1Vd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnStartGame" destination="8Ly-yn-gKS" id="uXq-PC-EW1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="154.89130434782609"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="ZWa-TC-mir">
+            <objects>
+                <viewController id="y5d-fz-UEa" customClass="GameViewController" customModule="Word_Bridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JVZ-mL-Vhq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="game face" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qx3-3V-Wt2">
+                                <rect key="frame" x="90" y="284" width="212" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8a-9H-kKt">
+                                <rect key="frame" x="216" y="561" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="dissmissGame:" destination="y5d-fz-UEa" eventType="touchUpInside" id="OB5-Gu-gA7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BnZ-Y5-Mzj"/>
+                    </view>
+                    <connections>
+                        <outlet property="quit" destination="K8a-9H-kKt" id="D6o-IL-clG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYa-il-2Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="154.89130434782609"/>
+        </scene>
+    </scenes>
+</document>

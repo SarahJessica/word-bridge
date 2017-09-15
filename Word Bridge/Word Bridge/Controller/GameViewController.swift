@@ -11,8 +11,16 @@ import UIKit
 class GameViewController: UIViewController {
 
     @IBOutlet weak var quit: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let gameData = GameData.getAllData() {
+            print(gameData)
+        }
+    }
 
     @IBAction func dissmissGame(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
 }

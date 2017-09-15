@@ -81,27 +81,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="game face" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qx3-3V-Wt2">
-                                <rect key="frame" x="90" y="284" width="212" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8a-9H-kKt">
-                                <rect key="frame" x="216" y="561" width="46" height="30"/>
+                                <rect key="frame" x="348" y="47" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="back"/>
                                 <connections>
                                     <action selector="dissmissGame:" destination="y5d-fz-UEa" eventType="touchUpInside" id="OB5-Gu-gA7"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="U57-2m-F3z">
+                                <rect key="frame" x="117" y="188" width="180" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7q-Hq-gKz" customClass="LabelBridgeTile" customModule="Word_Bridge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Hql-HW-atg"/>
+                                            <constraint firstAttribute="height" constant="50" id="azm-xL-eVv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CI2-72-N83" customClass="LabelBridgeTile" customModule="Word_Bridge" customModuleProvider="target">
+                                        <rect key="frame" x="65" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="IVc-kt-mSp"/>
+                                            <constraint firstAttribute="height" constant="50" id="fYh-hJ-ebU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLj-9q-m3h" customClass="LabelBridgeTile" customModule="Word_Bridge" customModuleProvider="target">
+                                        <rect key="frame" x="130" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WiM-lp-PZt"/>
+                                            <constraint firstAttribute="width" constant="50" id="oI7-Uu-jAF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LX6-PI-A7Q">
+                                <rect key="frame" x="75" y="278" width="264" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-fW-njV">
+                                <rect key="frame" x="186" y="87" width="42" height="42"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.69019607839999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="3CY-42-pEk"/>
+                                    <constraint firstAttribute="width" constant="42" id="nIa-9o-y7D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.69019607839999997" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="v9q-fW-njV" firstAttribute="centerX" secondItem="U57-2m-F3z" secondAttribute="centerX" id="0vt-NV-rkQ"/>
+                            <constraint firstItem="v9q-fW-njV" firstAttribute="top" secondItem="BnZ-Y5-Mzj" secondAttribute="top" constant="67" id="AKm-NF-syk"/>
+                            <constraint firstItem="LX6-PI-A7Q" firstAttribute="leading" secondItem="BnZ-Y5-Mzj" secondAttribute="leading" constant="75" id="IfN-1t-lOX"/>
+                            <constraint firstItem="U57-2m-F3z" firstAttribute="top" secondItem="BnZ-Y5-Mzj" secondAttribute="top" constant="168" id="eau-0O-OyA"/>
+                            <constraint firstItem="BnZ-Y5-Mzj" firstAttribute="bottom" secondItem="LX6-PI-A7Q" secondAttribute="bottom" constant="428" id="hrR-1b-Psa"/>
+                            <constraint firstItem="LX6-PI-A7Q" firstAttribute="top" secondItem="U57-2m-F3z" secondAttribute="bottom" constant="40" id="mds-kk-gDF"/>
+                            <constraint firstItem="U57-2m-F3z" firstAttribute="centerX" secondItem="JVZ-mL-Vhq" secondAttribute="centerX" id="nKa-OY-mWi"/>
+                            <constraint firstItem="v9q-fW-njV" firstAttribute="centerX" secondItem="LX6-PI-A7Q" secondAttribute="centerX" id="tsC-qz-qu1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BnZ-Y5-Mzj"/>
                     </view>
                     <connections>
+                        <outlet property="countdown" destination="v9q-fW-njV" id="1hn-63-LCm"/>
                         <outlet property="quit" destination="K8a-9H-kKt" id="D6o-IL-clG"/>
+                        <outlet property="textFieldAnswerBox" destination="LX6-PI-A7Q" id="TgK-pl-Lbe"/>
+                        <outlet property="tile1" destination="j7q-Hq-gKz" id="pUW-EM-FnL"/>
+                        <outlet property="tile2" destination="CI2-72-N83" id="faH-D6-Oiy"/>
+                        <outlet property="tile3" destination="gLj-9q-m3h" id="2au-lu-lUO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYa-il-2Zj" userLabel="First Responder" sceneMemberID="firstResponder"/>

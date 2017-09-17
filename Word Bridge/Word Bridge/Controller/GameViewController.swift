@@ -24,7 +24,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let gameData = GameData.getAllData() {
-            print(gameData)
             setUpGame(with: gameData)
             let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
                 self.countdownTime -= 1
@@ -84,9 +83,16 @@ extension GameViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var validAnswer = false
         if let textFieldText = textField.text {
-            // TODO: handle editing of text within text view. New character might not be at the end
-            validAnswer = checkAnswer("\(textFieldText)\(string)")
+            // TODO: handle removal of whitespace within text view
+            let input = newInput(string, in: textFieldText, at: range.location)
+            validAnswer = checkAnswer(input)
         }
         return !validAnswer
+    }
+    
+    func newInput(_ string: String, in stringText: String?, at rangeLocation: Int) -> String {
+        let firstHalfString = (stringText as NSString?)?.substring(to: rangeLocation) ?? ""
+        let secondHalfString = (stringText as NSString?)?.substring(from: rangeLocation) ?? ""
+        return "\(firstHalfString)\(string)\(secondHalfString)"
     }
 }

@@ -49,8 +49,9 @@ class GameViewController: UIViewController {
     }
     
     func setUpGame(with data: [GameData]) {
-//        let random = arc4random(data.count)
-        set = data[0]
+//        print("data.count \(data.count)")
+        let random = Int(arc4random_uniform(UInt32(data.count)))
+        set = data[random]
         if let set = set {
             tile1.text = set.tile1.uppercased()
             tile2.text = set.tile2.uppercased()
@@ -67,11 +68,13 @@ class GameViewController: UIViewController {
         if let set = set,
             ( set.validAnswers.contains(answer) && !prevAnswers.contains(answer)) {
             prevAnswers.append(answer)
+            //TODO: call show accepted answer func here
             textFieldAnswerBox.text = ""
             return true
         }
         return false
     }
+    //TODO: make func that shows answer just entred on screen
     
     func endGame() {
         print("game over")

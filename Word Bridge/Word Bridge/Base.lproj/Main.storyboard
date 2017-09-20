@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="75" y="278" width="264" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9q-fW-njV">
                                 <rect key="frame" x="186" y="87" width="42" height="42"/>
@@ -141,12 +141,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwB-nG-IWO">
+                                <rect key="frame" x="132" y="316" width="150" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="7G8-Et-zBm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.69019607839999997" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v9q-fW-njV" firstAttribute="centerX" secondItem="U57-2m-F3z" secondAttribute="centerX" id="0vt-NV-rkQ"/>
                             <constraint firstItem="v9q-fW-njV" firstAttribute="top" secondItem="BnZ-Y5-Mzj" secondAttribute="top" constant="67" id="AKm-NF-syk"/>
                             <constraint firstItem="LX6-PI-A7Q" firstAttribute="leading" secondItem="BnZ-Y5-Mzj" secondAttribute="leading" constant="75" id="IfN-1t-lOX"/>
+                            <constraint firstItem="dwB-nG-IWO" firstAttribute="centerX" secondItem="JVZ-mL-Vhq" secondAttribute="centerX" id="KG1-YM-mZj"/>
+                            <constraint firstItem="dwB-nG-IWO" firstAttribute="top" secondItem="LX6-PI-A7Q" secondAttribute="bottom" constant="8" symbolic="YES" id="VEV-wp-LYH"/>
                             <constraint firstItem="U57-2m-F3z" firstAttribute="top" secondItem="BnZ-Y5-Mzj" secondAttribute="top" constant="168" id="eau-0O-OyA"/>
                             <constraint firstItem="BnZ-Y5-Mzj" firstAttribute="bottom" secondItem="LX6-PI-A7Q" secondAttribute="bottom" constant="428" id="hrR-1b-Psa"/>
                             <constraint firstItem="LX6-PI-A7Q" firstAttribute="top" secondItem="U57-2m-F3z" secondAttribute="bottom" constant="40" id="mds-kk-gDF"/>
@@ -157,6 +168,7 @@
                     </view>
                     <connections>
                         <outlet property="countdown" destination="v9q-fW-njV" id="1hn-63-LCm"/>
+                        <outlet property="previousEntries" destination="dwB-nG-IWO" id="bdg-fm-md4"/>
                         <outlet property="quit" destination="K8a-9H-kKt" id="D6o-IL-clG"/>
                         <outlet property="textFieldAnswerBox" destination="LX6-PI-A7Q" id="TgK-pl-Lbe"/>
                         <outlet property="tile1" destination="j7q-Hq-gKz" id="pUW-EM-FnL"/>

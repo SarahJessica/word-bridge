@@ -9,6 +9,8 @@
 import UIKit
 
 class GameViewController: UIViewController {
+    
+    //TODO: stop timer when game is quit
 
     @IBOutlet weak var quit: UIButton!
     @IBOutlet weak var tile1: LabelBridgeTile!
@@ -16,6 +18,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var tile3: LabelBridgeTile!
     @IBOutlet weak var textFieldAnswerBox: UITextField!
     @IBOutlet weak var countdown: UILabel!
+    @IBOutlet weak var previousEntries: UILabel!
     
     var countdownTime = 60
     var prevAnswers: [String] = []
@@ -44,12 +47,8 @@ class GameViewController: UIViewController {
         textFieldAnswerBox.becomeFirstResponder()
     }
 
-    @IBAction func dissmissGame(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     func setUpGame(with data: [GameData]) {
-//        print("data.count \(data.count)")
         let random = Int(arc4random_uniform(UInt32(data.count)))
         set = data[random]
         if let set = set {
@@ -67,18 +66,29 @@ class GameViewController: UIViewController {
     func checkAnswer(_ answer: String) -> Bool {
         if let set = set,
             ( set.validAnswers.contains(answer) && !prevAnswers.contains(answer)) {
-            prevAnswers.append(answer)
-            //TODO: call show accepted answer func here
+            prevAnswers.insert(answer, at: 0)
+            updateAcceptedAnswers()
             textFieldAnswerBox.text = ""
             return true
         }
         return false
     }
-    //TODO: make func that shows answer just entred on screen
+    
+    func updateAcceptedAnswers() {
+        previousEntries.text! = ""
+        for answer in prevAnswers {
+            previousEntries.numberOfLines += 1
+            previousEntries.text! += "\(answer)\n"
+        }
+    }
     
     func endGame() {
         print("game over")
         print("\(prevAnswers)")
+    }
+    
+    @IBAction func dissmissGame(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -86,7 +96,7 @@ extension GameViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var validAnswer = false
         if let textFieldText = textField.text {
-            // TODO: handle removal of whitespace within text view
+            // TODO: handle removal of whitespace within text view (check if still nec.)
             let input = newInput(string, in: textFieldText, at: range.location)
             validAnswer = checkAnswer(input)
         }

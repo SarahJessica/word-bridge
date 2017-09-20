@@ -180,5 +180,20 @@
             </objects>
             <point key="canvasLocation" x="844.92753623188412" y="154.89130434782609"/>
         </scene>
+        <!--Success View Controller-->
+        <scene sceneID="yVA-r2-kKy">
+            <objects>
+                <viewController id="JbC-D7-xVF" customClass="SuccessViewController" customModule="Word_Bridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SPa-uO-yS0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="7pn-R6-RtK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLO-VD-kwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="826"/>
+        </scene>
     </scenes>
 </document>

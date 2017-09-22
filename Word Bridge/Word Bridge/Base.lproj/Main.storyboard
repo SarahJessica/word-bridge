@@ -169,7 +169,6 @@
                     <connections>
                         <outlet property="countdown" destination="v9q-fW-njV" id="1hn-63-LCm"/>
                         <outlet property="previousEntries" destination="dwB-nG-IWO" id="bdg-fm-md4"/>
-                        <outlet property="quit" destination="K8a-9H-kKt" id="D6o-IL-clG"/>
                         <outlet property="textFieldAnswerBox" destination="LX6-PI-A7Q" id="TgK-pl-Lbe"/>
                         <outlet property="tile1" destination="j7q-Hq-gKz" id="pUW-EM-FnL"/>
                         <outlet property="tile2" destination="CI2-72-N83" id="faH-D6-Oiy"/>

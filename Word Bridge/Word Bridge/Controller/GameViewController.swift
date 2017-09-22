@@ -9,10 +9,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    
-    //TODO: stop timer when game is quit
 
-    @IBOutlet weak var quit: UIButton!
     @IBOutlet weak var tile1: LabelBridgeTile!
     @IBOutlet weak var tile2: LabelBridgeTile!
     @IBOutlet weak var tile3: LabelBridgeTile!
@@ -23,12 +20,13 @@ class GameViewController: UIViewController {
     var countdownTime = 60
     var prevAnswers: [String] = []
     var set: GameData?
+    var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let gameData = GameData.getAllData() {
             setUpGame(with: gameData)
-            let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
                 self.countdownTime -= 1
                 self.countdown.text = "\(self.countdownTime)"
                 if self.countdownTime == 0 {
@@ -88,6 +86,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func dissmissGame(_ sender: Any) {
+        timer.invalidate()
         self.dismiss(animated: true, completion: nil)
     }
 }

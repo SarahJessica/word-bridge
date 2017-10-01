@@ -95,7 +95,6 @@ extension GameViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var validAnswer = false
         if let textFieldText = textField.text {
-            // TODO: handle removal of whitespace within text view (check if still nec.)
             let input = newInput(string, in: textFieldText, at: range.location)
             validAnswer = checkAnswer(input)
         }

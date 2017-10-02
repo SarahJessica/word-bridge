@@ -10,8 +10,10 @@ import Foundation
 
 struct Game {
     
-    var set: GameData?
-    var score: Int
-    var prevAnswers: [String] = []
+    public var set: GameData?
+    public var score: Int
+    public var prevAnswers: [String] = []
     
 }
+
+var game = Game(set: nil, score: 0, prevAnswers: [])

@@ -12,7 +12,8 @@ class SuccessViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("access to global var game:\(game.score)")
         // Do any additional setup after loading the view.
     }
 

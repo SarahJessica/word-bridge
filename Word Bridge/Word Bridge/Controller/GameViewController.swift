@@ -18,8 +18,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var previousEntries: UILabel!
     
     var countdownTime = 60
+    
     var prevAnswers: [String] = []
-    var set: GameData?
+//    var set: GameData?
     var timer: Timer!
     
     override func viewDidLoad() {
@@ -48,11 +49,11 @@ class GameViewController: UIViewController {
     
     func setUpGame(with data: [GameData]) {
         let random = Int(arc4random_uniform(UInt32(data.count)))
-        set = data[random]
-        if let set = set {
-            tile1.text = set.tile1.uppercased()
-            tile2.text = set.tile2.uppercased()
-            tile3.text = set.tile3.uppercased()
+        game.set = data[random]
+        if let s = game.set {
+            tile1.text = s.tile1.uppercased()
+            tile2.text = s.tile2.uppercased()
+            tile3.text = s.tile3.uppercased()
         }
         
         countdown.textAlignment = .center
@@ -62,9 +63,9 @@ class GameViewController: UIViewController {
     }
     
     func checkAnswer(_ answer: String) -> Bool {
-        if let set = set,
-            ( set.validAnswers.contains(answer) && !prevAnswers.contains(answer)) {
-            prevAnswers.insert(answer, at: 0)
+        if let set = game.set,
+            ( set.validAnswers.contains(answer) && !game.prevAnswers.contains(answer)) {
+            game.prevAnswers.insert(answer, at: 0)
             updateAcceptedAnswers()
             textFieldAnswerBox.text = ""
             return true
@@ -72,17 +73,35 @@ class GameViewController: UIViewController {
         return false
     }
     
+    // displays prevAnswers in UI
     func updateAcceptedAnswers() {
         previousEntries.text! = ""
-        for answer in prevAnswers {
+        for answer in game.prevAnswers {
             previousEntries.numberOfLines += 1
             previousEntries.text! += "\(answer)\n"
         }
     }
     
+    func calculateScore() {
+        for answer in game.prevAnswers {
+            var answerValue: Int
+            let length = answer.characters.count
+            let multiplier = length - 4
+            if multiplier >= 2 {
+                answerValue = length * multiplier
+            } else {
+                answerValue = length
+            }
+            game.score += answerValue
+        }
+    }
+    
     func endGame() {
+        calculateScore()
+        self.performSegue(withIdentifier: "showSuccessView", sender: self)
         print("game over")
-        print("\(prevAnswers)")
+        print("\(game.prevAnswers)")
+        print("score:\(game.score)")
     }
     
     @IBAction func dissmissGame(_ sender: Any) {

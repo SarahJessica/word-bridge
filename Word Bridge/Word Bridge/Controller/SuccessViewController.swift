@@ -9,7 +9,9 @@
 import UIKit
 
 class SuccessViewController: UIViewController {
+
     @IBOutlet weak var prevAnswersLabel: UILabel!
+    @IBOutlet weak var prevScoresLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

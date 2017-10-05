@@ -66,7 +66,7 @@ class GameViewController: UIViewController {
         if let set = game.set,
             ( set.validAnswers.contains(answer) && !game.prevAnswers.contains(answer)) {
             game.prevAnswers.insert(answer, at: 0)
-            updateVerticalSingleStringList(game.prevAnswers, in: previousEntries)
+            updateVerticalSingleStringDisplay(game.prevAnswers, in: previousEntries)
             textFieldAnswerBox.text = ""
             return true
         }
@@ -83,7 +83,6 @@ class GameViewController: UIViewController {
             } else {
                 answerValue = length
             }
-            // add individual answerScores to the UI
             game.answerScores.insert(answerValue, at: 0)
             game.score += answerValue
         }

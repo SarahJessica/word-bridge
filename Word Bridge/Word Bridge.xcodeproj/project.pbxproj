@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A94931CD1F862ADA00055AC3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94931CC1F862ADA00055AC3 /* UIViewControllerExtensions.swift */; };
 		A94D30321F73257D006A938C /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94D30311F73257D006A938C /* SuccessViewController.swift */; };
 		A94D30341F75698D006A938C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94D30331F75698D006A938C /* Game.swift */; };
 		A9A3B2FD1F6AC59C0013B7AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A3B2FC1F6AC59C0013B7AB /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A94931CC1F862ADA00055AC3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A94D30311F73257D006A938C /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		A94D30331F75698D006A938C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		A9A3B2F91F6AC59C0013B7AB /* Word Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Bridge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 				A9A3B2FE1F6AC59C0013B7AB /* ViewController.swift */,
 				A9A3B32E1F6ADB0B0013B7AB /* GameViewController.swift */,
 				A94D30311F73257D006A938C /* SuccessViewController.swift */,
+				A94931CC1F862ADA00055AC3 /* UIViewControllerExtensions.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				A94D30321F73257D006A938C /* SuccessViewController.swift in Sources */,
 				A9FF9C3D1F6C1A1200F0147B /* LabelBridgeTile.swift in Sources */,
 				A9FF9C371F6C02B600F0147B /* GameData.swift in Sources */,
+				A94931CD1F862ADA00055AC3 /* UIViewControllerExtensions.swift in Sources */,
 				A9A3B2FF1F6AC59C0013B7AB /* ViewController.swift in Sources */,
 				A9A3B32C1F6ACEB40013B7AB /* ButtonMainMenu.swift in Sources */,
 				A9A3B2FD1F6AC59C0013B7AB /* AppDelegate.swift in Sources */,

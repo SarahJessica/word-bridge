@@ -208,36 +208,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Game Over" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-yq-lqE">
-                                <rect key="frame" x="87" y="44" width="240" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Game Over" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-yq-lqE">
+                                <rect key="frame" x="75" y="55" width="300" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="n1C-xh-WtC"/>
+                                    <constraint firstAttribute="height" constant="55" id="rAj-gE-X1e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xbx-et-c6A">
-                                <rect key="frame" x="161" y="147" width="92.666666666666657" height="23.333333333333332"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xbx-et-c6A">
+                                <rect key="frame" x="0.0" y="130" width="450" height="606"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-GK-AUz" userLabel="scores">
-                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333343" height="23.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-GK-AUz" userLabel="scores">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="606"/>
                                         <color key="backgroundColor" red="0.98823529409999999" green="0.69019607839999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="73" id="tg4-EO-kfn"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMa-MD-WTQ" userLabel="answers">
-                                        <rect key="frame" x="51.333333333333343" y="0.0" width="41.333333333333314" height="23.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMa-MD-WTQ" userLabel="answers">
+                                        <rect key="frame" x="83" y="0.0" width="367" height="606"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.69019607839999997" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="AYg-NK-aRs"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xbx-et-c6A" firstAttribute="centerX" secondItem="SPa-uO-yS0" secondAttribute="centerX" id="j1p-Ev-XFh"/>
+                            <constraint firstItem="Xbx-et-c6A" firstAttribute="width" secondItem="SPa-uO-yS0" secondAttribute="width" id="CAN-Md-tW0"/>
+                            <constraint firstItem="Xbx-et-c6A" firstAttribute="bottom" secondItem="7pn-R6-RtK" secondAttribute="bottom" id="KYL-66-Onj"/>
+                            <constraint firstItem="Xbx-et-c6A" firstAttribute="top" secondItem="QOH-yq-lqE" secondAttribute="bottom" constant="20" id="Oni-P6-G5r"/>
+                            <constraint firstItem="QOH-yq-lqE" firstAttribute="top" secondItem="7pn-R6-RtK" secondAttribute="top" constant="35" id="eWY-JF-yh2"/>
+                            <constraint firstItem="Xbx-et-c6A" firstAttribute="centerX" secondItem="QOH-yq-lqE" secondAttribute="centerX" id="sL9-Ne-XJp"/>
+                            <constraint firstItem="Xbx-et-c6A" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="7pn-R6-RtK" secondAttribute="bottom" id="xTb-tZ-x8i"/>
+                            <constraint firstItem="QOH-yq-lqE" firstAttribute="centerX" secondItem="SPa-uO-yS0" secondAttribute="centerX" id="yxW-sA-CnD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7pn-R6-RtK"/>
                     </view>

@@ -12,13 +12,12 @@ extension UIViewController {
 
         
     // displays prevAnswers in UI
-    func updateVerticalSingleStringList(_ list: [String], in label: UILabel) {
+    func updateVerticalSingleStringDisplay(_ list: [Any], in label: UILabel) {
         label.text! = ""
         for item in list {
             label.numberOfLines += 1
             label.text! += "\(item)\n"
         }
     }
-    
 
 }

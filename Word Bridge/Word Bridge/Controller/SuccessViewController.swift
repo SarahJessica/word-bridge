@@ -15,7 +15,8 @@ class SuccessViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateVerticalSingleStringList(game.prevAnswers, in: prevAnswersLabel)
+        updateVerticalSingleStringDisplay(game.prevAnswers, in: prevAnswersLabel)
+        updateVerticalSingleStringDisplay(game.answerScores, in: prevScoresLabel)
     }
 
     override func didReceiveMemoryWarning() {

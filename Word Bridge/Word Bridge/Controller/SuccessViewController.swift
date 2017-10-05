@@ -9,12 +9,11 @@
 import UIKit
 
 class SuccessViewController: UIViewController {
-
+    @IBOutlet weak var prevAnswersLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("access to global var game:\(game.score)")
-        // Do any additional setup after loading the view.
+        updateVerticalSingleStringList(game.prevAnswers, in: prevAnswersLabel)
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,8 +12,9 @@ struct Game {
     
     public var set: GameData?
     public var score: Int
-    public var prevAnswers: [String] = []
+    public var prevAnswers: [String]
+    public var answerScores: [Int]
     
 }
 
-var game = Game(set: nil, score: 0, prevAnswers: [])
+var game = Game(set: nil, score: 0, prevAnswers: [], answerScores: [])

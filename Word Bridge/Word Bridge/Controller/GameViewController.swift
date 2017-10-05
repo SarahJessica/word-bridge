@@ -66,20 +66,11 @@ class GameViewController: UIViewController {
         if let set = game.set,
             ( set.validAnswers.contains(answer) && !game.prevAnswers.contains(answer)) {
             game.prevAnswers.insert(answer, at: 0)
-            updateAcceptedAnswers()
+            updateVerticalSingleStringList(game.prevAnswers, in: previousEntries)
             textFieldAnswerBox.text = ""
             return true
         }
         return false
-    }
-    
-    // displays prevAnswers in UI
-    func updateAcceptedAnswers() {
-        previousEntries.text! = ""
-        for answer in game.prevAnswers {
-            previousEntries.numberOfLines += 1
-            previousEntries.text! += "\(answer)\n"
-        }
     }
     
     func calculateScore() {
@@ -92,6 +83,8 @@ class GameViewController: UIViewController {
             } else {
                 answerValue = length
             }
+            // add individual answerScores to the UI
+            game.answerScores.insert(answerValue, at: 0)
             game.score += answerValue
         }
     }

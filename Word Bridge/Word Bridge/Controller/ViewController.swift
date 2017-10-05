@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnStartGame.setTitle("Start Game", for: .normal)
+        
+        game.score = 0
+        game.prevAnswers = []
+        game.answerScores = []
     }
 
     override func didReceiveMemoryWarning() {

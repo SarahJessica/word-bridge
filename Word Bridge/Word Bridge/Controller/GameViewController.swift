@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var textFieldAnswerBox: UITextField!
     @IBOutlet weak var countdown: UILabel!
     @IBOutlet weak var previousEntries: UILabel!
+    @IBOutlet weak var bridgeImage: UIImageView!
     
     var countdownTime = 60
     
@@ -91,9 +92,6 @@ class GameViewController: UIViewController {
     func endGame() {
         calculateScore()
         self.performSegue(withIdentifier: "showSuccessView", sender: self)
-        print("game over")
-        print("\(game.prevAnswers)")
-        print("score:\(game.score)")
     }
     
     @IBAction func dissmissGame(_ sender: Any) {

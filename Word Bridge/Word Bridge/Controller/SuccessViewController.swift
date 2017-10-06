@@ -19,7 +19,7 @@ class SuccessViewController: UIViewController {
         updateVerticalSingleStringDisplay(game.prevAnswers, in: prevAnswersLabel)
         updateVerticalSingleStringDisplay(game.answerScores, in: prevScoresLabel)
         totalScoreLabel.text = "Score: \(game.score)pts"
-        _ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
     }
 
     override func didReceiveMemoryWarning() {

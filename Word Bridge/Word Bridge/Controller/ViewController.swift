@@ -11,11 +11,13 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var btnStartGame: ButtonMainMenu!
+    @IBOutlet weak var btnAboutWB: ButtonMainMenu!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         btnStartGame.setTitle("Start Game", for: .normal)
-        
+        btnAboutWB.setTitle("About Word Bridge", for: .normal)
+
         game.score = 0
         game.prevAnswers = []
         game.answerScores = []

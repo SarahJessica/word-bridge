@@ -21,7 +21,6 @@ class GameViewController: UIViewController {
     var countdownTime = 60
     
     var prevAnswers: [String] = []
-//    var set: GameData?
     var timer: Timer!
     
     override func viewDidLoad() {
@@ -64,14 +63,59 @@ class GameViewController: UIViewController {
     }
     
     func checkAnswer(_ answer: String) -> Bool {
-        if let set = game.set,
-            ( set.validAnswers.contains(answer) && !game.prevAnswers.contains(answer)) {
+        if let set = game.set {
+            let tilePlaceTuple = (
+                findCharInString(char: Array(set.id)[0], string: answer),
+                findCharInString(char: Array(set.id)[1], string: answer),
+                findCharInString(char: Array(set.id)[2], string: answer)
+            )
+            showBridgeImage(for: tilePlaceTuple, in: answer)
+            if ( set.validAnswers.contains(answer) && !game.prevAnswers.contains(answer)) {
             game.prevAnswers.insert(answer, at: 0)
             updateVerticalSingleStringDisplay(game.prevAnswers, in: previousEntries)
             textFieldAnswerBox.text = ""
             return true
+            }
         }
         return false
+    }
+    
+    func showBridgeImage(for tuple: (Int?, Int?, Int?), in string: String) {
+        if string != "" {
+            switch tuple {
+            case (nil, nil, nil):
+                print("no letters")
+            case (_, nil, nil):
+                print("first tile")
+            case (_, _, nil):
+                if tuple.0! > tuple.1! {
+                    print("first tile")
+                } else {
+                    print("first two")
+                }
+            case (_,_,_):
+                if tuple.0? < tuple.1? {
+                    if tuple.1! < tuple.2! {
+                        print("all three")
+                    } else {
+                        print("first two")
+                    }
+                } else {
+                    print("no letters")
+                }
+            }
+        } else {
+               print("empty or 0")
+        }
+    }
+    
+    func findCharInString(char: Character, string: String) -> Int? {
+        if let index = string.characters.index(of: char) {
+            let pos = string.characters.distance(from: string.startIndex, to: index)
+            print("Found \(char) at position \(pos)")
+            return Int(pos)
+        }
+        else { return nil }
     }
     
     func calculateScore() {

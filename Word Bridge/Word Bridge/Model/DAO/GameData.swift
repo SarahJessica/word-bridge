@@ -14,6 +14,7 @@ struct GameData: Codable, CustomStringConvertible {
     let tile2: String
     let tile3: String
     let validAnswers: [String]
+    let id: String
     
     static func getAllData() -> [GameData]? {
         let decoder = JSONDecoder()

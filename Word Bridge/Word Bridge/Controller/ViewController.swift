@@ -13,9 +13,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnStartGame: ButtonMainMenu!
     @IBOutlet weak var btnAboutWB: ButtonMainMenu!
     @IBOutlet weak var aboutView: UIView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var colourBg: UIView!
     
     @IBAction func btnAboutTapped(_ sender: Any) {
         aboutView.isHidden = false
+        descriptionLabel.text = """
+        Word Bridge was originally created as a student project for COS7033-B at the University of Bradford.
+        To play Word Bridge input words using the letters shown in the tiles along with other letters which 'bridge' these to make proper English words. Remember that the letters shown in the tiles must be used in order, left-to-right and cannot appear in a first for the first time before the letters in tiles have. It really isn't difficult, just have a go!
+        """
     }
     
     @IBAction func btnCloseAboutTapped(_ sender: Any) {
@@ -27,6 +33,7 @@ class ViewController: UIViewController {
         btnStartGame.setTitle("Start Game", for: .normal)
         btnAboutWB.setTitle("About Word Bridge", for: .normal)
         aboutView.isHidden = true
+        colourBg.backgroundColor = ColourPalette.blue()
 
         game.score = 0
         game.prevAnswers = []

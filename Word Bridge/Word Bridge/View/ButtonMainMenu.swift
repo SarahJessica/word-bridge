@@ -10,7 +10,7 @@ import UIKit
 
 class ButtonMainMenu: UIButton {
     
-    @IBInspectable let bgColor: UIColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
+    @IBInspectable let bgColor: UIColor = ColourPalette.white()
     @IBInspectable let cRad: CGFloat = 10
     @IBInspectable let borderWd: CGFloat = 1
 

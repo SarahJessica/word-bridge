@@ -10,8 +10,8 @@ import UIKit
 
 class LabelBridgeTile: UILabel {
 
-    @IBInspectable let bgColor: UIColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
-    @IBInspectable let txtColor: UIColor = .black
+    @IBInspectable let bgColor: UIColor = ColourPalette.white()
+    @IBInspectable let txtColor: UIColor = ColourPalette.blue()
     @IBInspectable let cRad: CGFloat = 10
     
     override init(frame: CGRect) {

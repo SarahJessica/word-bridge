@@ -98,10 +98,22 @@
                                                     <action selector="dissmissGame:" destination="y5d-fz-UEa" eventType="touchUpInside" id="HXW-4c-Q7f"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sD-Rg-Azi">
+                                                <rect key="frame" x="180" y="135" width="0.0" height="517"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="220" id="lCi-Ez-hlM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="4RX-sE-HNJ" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="B2j-rU-CJG"/>
+                                            <constraint firstItem="5sD-Rg-Azi" firstAttribute="top" secondItem="NHR-8W-Yo6" secondAttribute="top" constant="135" id="MDO-h0-G9T"/>
+                                            <constraint firstItem="5sD-Rg-Azi" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="Z5k-TP-iOE"/>
+                                            <constraint firstAttribute="bottom" secondItem="5sD-Rg-Azi" secondAttribute="bottom" constant="30" id="cKv-qX-l47"/>
                                             <constraint firstItem="4RX-sE-HNJ" firstAttribute="top" secondItem="NHR-8W-Yo6" secondAttribute="top" constant="52" id="zS4-is-xNV"/>
                                         </constraints>
                                     </view>
@@ -133,6 +145,8 @@
                         <outlet property="aboutView" destination="NHR-8W-Yo6" id="PSk-TR-xMJ"/>
                         <outlet property="btnAboutWB" destination="t02-84-qzn" id="bfu-Sy-hbt"/>
                         <outlet property="btnStartGame" destination="8Ly-yn-gKS" id="uXq-PC-EW1"/>
+                        <outlet property="colourBg" destination="Kfe-Ed-t7c" id="Vj2-Xl-f8x"/>
+                        <outlet property="descriptionLabel" destination="5sD-Rg-Azi" id="B3A-qp-zYz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -275,6 +289,8 @@
                     </view>
                     <connections>
                         <outlet property="bridgeImage" destination="tqm-gn-kxA" id="eMD-it-AVi"/>
+                        <outlet property="closeBtnText" destination="K8a-9H-kKt" id="eJ1-gi-mzr"/>
+                        <outlet property="colourBg" destination="0cQ-CD-dPb" id="jE3-xL-xFL"/>
                         <outlet property="countdown" destination="v9q-fW-njV" id="1hn-63-LCm"/>
                         <outlet property="previousEntries" destination="dwB-nG-IWO" id="bdg-fm-md4"/>
                         <outlet property="textFieldAnswerBox" destination="LX6-PI-A7Q" id="TgK-pl-Lbe"/>
@@ -296,9 +312,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9s-Kh-2O5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.69019607839999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Game Over" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QOH-yq-lqE">
                                 <rect key="frame" x="57" y="55" width="300" height="55"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="n1C-xh-WtC"/>
                                     <constraint firstAttribute="height" constant="55" id="rAj-gE-X1e"/>
@@ -311,9 +331,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-GK-AUz" userLabel="scores">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="606"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="tg4-EO-kfn"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -367,6 +384,7 @@
                         <viewLayoutGuide key="safeArea" id="7pn-R6-RtK"/>
                     </view>
                     <connections>
+                        <outlet property="bgColourView" destination="b9s-Kh-2O5" id="h6J-3g-3In"/>
                         <outlet property="prevAnswersLabel" destination="RMa-MD-WTQ" id="9mz-68-9y6"/>
                         <outlet property="prevScoresLabel" destination="2NK-GK-AUz" id="ghm-nk-auy"/>
                         <outlet property="totalScoreLabel" destination="9MH-9b-IOC" id="q8r-Mc-74C"/>

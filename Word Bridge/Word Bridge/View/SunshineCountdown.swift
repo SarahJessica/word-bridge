@@ -11,9 +11,9 @@ import UIKit
 class SunshineCountdown: UILabel {
 
     
-    @IBInspectable let bgColor: UIColor = #colorLiteral(red: 0.9956409335, green: 0.740465939, blue: 0.2969104052, alpha: 1)
+    @IBInspectable let bgColor: UIColor = ColourPalette.orange()
     @IBInspectable let cRad: CGFloat = 21
-    @IBInspectable let txtColor: UIColor = .black
+    @IBInspectable let txtColor: UIColor = ColourPalette.black()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

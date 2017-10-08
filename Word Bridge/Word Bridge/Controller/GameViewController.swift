@@ -17,6 +17,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var countdown: UILabel!
     @IBOutlet weak var previousEntries: UILabel!
     @IBOutlet weak var bridgeImage: UIImageView!
+    @IBOutlet weak var colourBg: UIView!
+    @IBOutlet weak var closeBtnText: UIButton!
     
     var countdownTime = 60
     
@@ -26,6 +28,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        colourBg.backgroundColor = ColourPalette.turquoise()
+        closeBtnText.setTitleColor(ColourPalette.brick(), for: .normal)
         if let gameData = GameData.getAllData() {
             setUpGame(with: gameData)
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in

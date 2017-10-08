@@ -13,9 +13,11 @@ class SuccessViewController: UIViewController {
     @IBOutlet weak var prevAnswersLabel: UILabel!
     @IBOutlet weak var prevScoresLabel: UILabel!
     @IBOutlet weak var totalScoreLabel: UILabel!
+    @IBOutlet weak var bgColourView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bgColourView.backgroundColor = ColourPalette.orange()
         updateVerticalSingleStringDisplay(game.prevAnswers, in: prevAnswersLabel)
         updateVerticalSingleStringDisplay(game.answerScores, in: prevScoresLabel)
         totalScoreLabel.text = "Score: \(game.score)pts"

@@ -85,9 +85,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-wf-ryB">
-                                                <rect key="frame" x="266" y="18" width="86" height="47"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-wf-ryB">
+                                                <rect key="frame" x="268" y="18" width="84" height="47"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                                 <state key="normal" title="close X">
                                                     <color key="titleColor" red="0.4146899288" green="0.4146899288" blue="0.4146899288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,8 +128,10 @@
                                         <constraints>
                                             <constraint firstItem="4RX-sE-HNJ" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="B2j-rU-CJG"/>
                                             <constraint firstItem="5sD-Rg-Azi" firstAttribute="top" secondItem="NHR-8W-Yo6" secondAttribute="top" constant="135" id="MDO-h0-G9T"/>
+                                            <constraint firstItem="tzg-wf-ryB" firstAttribute="top" secondItem="NHR-8W-Yo6" secondAttribute="top" constant="18" id="NTr-av-b3D"/>
                                             <constraint firstAttribute="bottom" secondItem="wMB-cE-RJ1" secondAttribute="bottom" constant="55" id="Rc0-5r-brE"/>
                                             <constraint firstItem="5sD-Rg-Azi" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="Z5k-TP-iOE"/>
+                                            <constraint firstAttribute="trailing" secondItem="tzg-wf-ryB" secondAttribute="trailing" constant="8" id="bZX-4n-VMa"/>
                                             <constraint firstAttribute="bottom" secondItem="5sD-Rg-Azi" secondAttribute="bottom" constant="30" id="cKv-qX-l47"/>
                                             <constraint firstItem="4RX-sE-HNJ" firstAttribute="top" secondItem="NHR-8W-Yo6" secondAttribute="top" constant="52" id="zS4-is-xNV"/>
                                             <constraint firstItem="wMB-cE-RJ1" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="zXK-Oh-BNd"/>

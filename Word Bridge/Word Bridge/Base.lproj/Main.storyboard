@@ -76,7 +76,7 @@
                                         <rect key="frame" x="28" y="28" width="360" height="682"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Word Bridge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RX-sE-HNJ">
-                                                <rect key="frame" x="79.666666666666686" y="52" width="200" height="75"/>
+                                                <rect key="frame" x="80" y="52" width="200" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="bsw-QQ-nsL"/>
                                                     <constraint firstAttribute="height" constant="75" id="v4y-OE-ISe"/>
@@ -107,14 +107,33 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wMB-cE-RJ1">
+                                                <rect key="frame" x="65" y="596" width="231.66666666666669" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="use accessible colours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCu-7p-nhZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167.66666666666669" height="31"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yzU-VL-34C">
+                                                        <rect key="frame" x="182.66666666666669" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="accessibleColourSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="ebL-eo-GQh"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="4RX-sE-HNJ" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="B2j-rU-CJG"/>
                                             <constraint firstItem="5sD-Rg-Azi" firstAttribute="top" secondItem="NHR-8W-Yo6" secondAttribute="top" constant="135" id="MDO-h0-G9T"/>
+                                            <constraint firstAttribute="bottom" secondItem="wMB-cE-RJ1" secondAttribute="bottom" constant="55" id="Rc0-5r-brE"/>
                                             <constraint firstItem="5sD-Rg-Azi" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="Z5k-TP-iOE"/>
                                             <constraint firstAttribute="bottom" secondItem="5sD-Rg-Azi" secondAttribute="bottom" constant="30" id="cKv-qX-l47"/>
                                             <constraint firstItem="4RX-sE-HNJ" firstAttribute="top" secondItem="NHR-8W-Yo6" secondAttribute="top" constant="52" id="zS4-is-xNV"/>
+                                            <constraint firstItem="wMB-cE-RJ1" firstAttribute="centerX" secondItem="NHR-8W-Yo6" secondAttribute="centerX" id="zXK-Oh-BNd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -143,6 +162,7 @@
                     </view>
                     <connections>
                         <outlet property="aboutView" destination="NHR-8W-Yo6" id="PSk-TR-xMJ"/>
+                        <outlet property="accessibleColourSwitch" destination="yzU-VL-34C" id="CLS-xZ-7zx"/>
                         <outlet property="btnAboutWB" destination="t02-84-qzn" id="bfu-Sy-hbt"/>
                         <outlet property="btnStartGame" destination="8Ly-yn-gKS" id="uXq-PC-EW1"/>
                         <outlet property="colourBg" destination="Kfe-Ed-t7c" id="Vj2-Xl-f8x"/>

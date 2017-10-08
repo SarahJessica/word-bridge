@@ -18,4 +18,4 @@ struct Game {
     
 }
 
-var game = Game(set: nil, score: 0, prevAnswers: [], answerScores: [], isColourAccessibilityEnabled: true)
+var game = Game(set: nil, score: 0, prevAnswers: [], answerScores: [], isColourAccessibilityEnabled: false)

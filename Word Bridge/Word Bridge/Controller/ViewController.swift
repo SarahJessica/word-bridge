@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var aboutView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var colourBg: UIView!
+    @IBOutlet weak var accessibleColourSwitch: UISwitch!
     
     @IBAction func btnAboutTapped(_ sender: Any) {
         aboutView.isHidden = false
@@ -34,7 +35,8 @@ class ViewController: UIViewController {
         btnAboutWB.setTitle("About Word Bridge", for: .normal)
         aboutView.isHidden = true
         colourBg.backgroundColor = ColourPalette.blue()
-
+        isSwitchOnOrOff()
+        
         game.score = 0
         game.prevAnswers = []
         game.answerScores = []
@@ -45,5 +47,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func isSwitchOnOrOff() {
+        if game.isColourAccessibilityEnabled == true {
+            accessibleColourSwitch.isOn = true
+        } else {
+            accessibleColourSwitch.isOn = false
+        }
+    }
+    
+    @IBAction func accessibleColourSwitched(_ sender: Any) {
+        if game.isColourAccessibilityEnabled == true {
+            game.isColourAccessibilityEnabled = false
+            colourBg.backgroundColor = ColourPalette.blue()
+        } else {
+            game.isColourAccessibilityEnabled = true
+            colourBg.backgroundColor = ColourPalette.blue()
+        }
+    }
 }
 
